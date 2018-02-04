@@ -18,8 +18,8 @@ class Party:
 
 # globals
 app = Flask(__name__)
-account_sid = 'AC4e13fc094f1123f11509a0fe7c65da7c'
-account_token = '8860bd7669fda81f028652eda833a716'
+account_sid = ''
+account_token = ''
 client = Client(account_sid, account_token)
 
 ourParty = Party([35.282752, -120.659616], ['emily', '+18313597241'])
