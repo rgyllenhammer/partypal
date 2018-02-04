@@ -1,0 +1,14 @@
+# command functions                                                                                                                                                
+#def check_in():                                                                                                                                                   
+ #   import threading                                                                                                                                              
+#                                                                                                                                                                  
+ #   def check_msg():                                                                                                                                              
+  ##      t = threading.Timer(10.0, check_msg)                                                                                                                     
+    #    t.start()                                                                                                                                                 
+     #   client.api.account.messages.create(                                                                                                                       
+ #       to="+15303215413",                                                                                                                                        
+  #      from_="+18315081228",                                                                                                                                     
+   #     body="Hey, how's the party?")                                                                                                                             
+
+ #   t = threading.Timer(10.0, check_msg)                                                                                                                          
+#    t.start()    
