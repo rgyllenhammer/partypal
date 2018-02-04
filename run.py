@@ -4,11 +4,25 @@ from twilio.rest import Client
 from threading import Thread
 import time
 
+class Party:
+    def __init__(self, location, headinfo):
+        self.lat = str(location[0])
+        self.long = str(location[1])
+        self.headname = headinfo[0]
+        self.headnumber = headinfo[1]
+
+    def alert_party_head(self):
+        send_message(self.headnumber, '+18315081228', 'greetings {}, someone at your party by the name of reese feels uncomfortable. can you help?'.format(self.headname))
+
+
+
 # globals
 app = Flask(__name__)
 account_sid = 'AC4e13fc094f1123f11509a0fe7c65da7c'
 account_token = '8860bd7669fda81f028652eda833a716'
 client = Client(account_sid, account_token)
+
+ourParty = Party([35.282752, -120.659616], ['emily', '+18313597241'])
 
 session = False
 
@@ -39,12 +53,12 @@ def start_session():
 def end_session():
     return 'session has ended', False
 
-def send_help(friends = friendslist):
+def send_help(friends, partyinfo):
     for friend in friends:
         name = friend[0]
         number = friend[1]
 
-        send_message(number, '+18315081228', 'hello {}, your friend {} is in need of help at a party'.format(name, 'reese'))
+        send_message(number, '+18315081228', 'hello {}, your friend {} is in need of help at a party. they are at lat: {}, long: {}'.format(name, 'reese', partyinfo.lat, partyinfo.long))
 
     return 'friends are on the way', True
 
@@ -69,7 +83,7 @@ commands = {
     "start": start_session(),
     "end": end_session(),
     "easteregg": hehe(),
-    "man": show_commands()
+    "man": show_commands(),
 
 }
 
@@ -88,7 +102,9 @@ def sms_ahoy_reply():
         cmd = body[1:endInd]
 
         if cmd == 'help':
-            send_help(friendslist)
+            send_help(friendslist, ourParty)
+        elif cmd == 'alert':
+            ourParty.alert_party_head()
         else:
             reply, session = commands[cmd]
             resp.message(reply)
