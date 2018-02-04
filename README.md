@@ -14,11 +14,11 @@ A text messaging app, through Twilio, that checks up on the user throughout a pa
 # Packages need to run
 - ngrok
 - Flask
-- twilio 
+- Twilio 
 - REST API
 - expo
-- web.py
-- python
-- micro framework
+- Web.py
+- Python
+
 
   
