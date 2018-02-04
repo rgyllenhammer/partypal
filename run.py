@@ -67,10 +67,11 @@ def hehe():
 
 def show_commands():
     return '''
-        start: starts a session for a party
-        end: ends a session for a party
-        help: immediately calls your number one contact for help
-        man: displays command
+        [start]: starts a session for a party
+        [end]: ends a session for a party
+        [help]: immediately contacts your contacts for help
+        [man]: displays command
+        [alert]: alerts host of the party that you are uncomfortable
      ''', True
 
 def check_in(session):
