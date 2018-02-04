@@ -6,7 +6,7 @@ Party Pal is a text messaging app, through Twilio, to use when going to parties.
 To start, text [start] to the party pal number.
 This initiates the program that will send a discrete message "How's the party going?"
 The responses from the user can include:
-        [start]: starts a session for a party
+       \n [start]: starts a session for a party
                   it will send "Hey, how's the party going?" Every 20 minutes. 
         [end]: ends a session for a party
         [help]: immediately calls your number one contact for help
