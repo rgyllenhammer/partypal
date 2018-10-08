@@ -21,7 +21,7 @@ A text messaging app, through Twilio, that checks up on the user throughout a pa
 - Python
 
 # Placement
-This app one top 5 at the Cal Poly San Luis Obsibo Hackathon (SLO HACKS). And one first best use of the Twilio API.
+This app one top 5 at the Cal Poly San Luis Obsibo Hackathon (SLO HACKS). And won first best use of the Twilio API.
 
 
   
